@@ -1,0 +1,12 @@
+{
+    "aws": {
+        "awsOptions": {
+            "accessKeyId": "",
+            "secretAccessKey": "",
+            "region": "ap-southeast-2"
+        },
+        "bucketPath": "myfiles-develop.ju.to",
+        "username":"s3-userstorage-nocredentials-develop",
+        "RoleArn":"arn:aws:iam::406406619500:role/role-myfiles-develop-s3"
+    }
+}

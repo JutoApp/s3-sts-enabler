@@ -1,0 +1,2 @@
+config/Mikes-Macbook-Pro.json filter=git-crypt diff=git-crypt
+config/production.json filter=git-crypt diff=git-crypt

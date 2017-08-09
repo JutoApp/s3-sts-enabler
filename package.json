@@ -11,6 +11,9 @@
   "dependencies": {
     "aws-sdk": "^2.92.0",
     "config": "^1.26.1",
-    "s3fs": "^2.5.0"
+    "json-templater": "^1.1.0",
+    "moment": "^2.18.1",
+    "s3fs": "^2.5.0",
+    "winston": "^2.3.1"
   }
 }

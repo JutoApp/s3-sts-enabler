@@ -1,0 +1,53 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowRootAndHomeListingOfBucket",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::{{bucketPath}}"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "s3:prefix": [
+            "",
+            "{{myAppUserId}}/"
+          ],
+          "s3:delimiter": [
+            "/"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "AllowListingOfUserFolder",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::{{bucketPath}}"
+      ],
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": [
+            "{{myAppUserId}}/*"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "AllowAllS3ActionsInUserFolder",
+      "Action": [
+        "s3:*"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::{{bucketPath}}/{{myAppUserId}}/*"
+      ]
+    }
+  ]
+}

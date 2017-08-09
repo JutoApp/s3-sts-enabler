@@ -7,6 +7,12 @@
         },
         "bucketPath": "myfiles-develop.ju.to",
         "username":"s3-userstorage-nocredentials-develop",
-        "RoleArn":"arn:aws:iam::406406619500:role/role-myfiles-develop-s3"
+        "RoleArn":"arn:aws:iam::406406619500:role/role-myfiles-develop-s3",
+        "STSTokenRenewThresholdSeconds": 300 // refresh token if it expires within 5 minutes
+    },
+    "loggingConfig": {
+        "level":"debug",
+        "timestamp":true,
+        "colorize":true
     }
 }

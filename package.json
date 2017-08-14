@@ -1,6 +1,6 @@
 {
   "name": "s3-sts-enabler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Amazon STS Temporary Credentials (for S3 Use)",
   "main": "./distribution/s3-sts-enabler.js",
   "scripts": {

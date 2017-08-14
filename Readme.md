@@ -126,7 +126,7 @@ Take a look at [test.js](./test/test.js).
 First, import the module
     
 ```js
-import STSS3Enabler from 's3-sts-enabler';
+let STSS3Enabler =require('s3-sts-enabler');
 
 ```
 

@@ -217,4 +217,4 @@ class STSS3Enabler {
   }
 }
 
-export default STSS3Enabler;
+module.exports = STSS3Enabler;

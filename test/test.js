@@ -15,7 +15,7 @@ const logger = new (winston.Logger)({
   ]
 });
 
-import STSS3Enabler from '../s3-sts-enabler';
+import STSS3Enabler from '..';
 
 describe('STSS3Enabler', function () {
   let stsEnabler;
@@ -110,7 +110,7 @@ describe('STSS3Enabler', function () {
     return stsEnabler.fsProxyOperation('readdirp', [`deny_this/`], s3Params, appUserId, bucketPath)
       .then((result)=>{
         throw new Error('We should not have been able to read that. Promise was unexpectedly fulfilled. Result: ' + result);
-      }, function rejected(error) {
+      }, function rejected() {
         assert.ok(true);
       });
   });
@@ -119,7 +119,7 @@ describe('STSS3Enabler', function () {
     return stsEnabler.fsProxyOperation('writeFile', [`deny_this/message.txt`, 'Hello Node'], s3Params, appUserId, bucketPath)
       .then((result)=>{
         throw new Error('We should not have been able to write that. Promise was unexpectedly fulfilled. Result: ' + result);
-      }, function rejected(error) {
+      }, function rejected() {
         assert.ok(true);
       });
   });

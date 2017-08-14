@@ -1,10 +1,10 @@
 {
-  "name": "s3-filesystem",
+  "name": "s3-sts-enabler",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "s3-filesystem.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha --require babel-register"
+    "test": "NODE_CONFIG_DIR=test/config NODE_ENV=test mocha --require babel-register"
   },
   "author": "",
   "license": "ISC",

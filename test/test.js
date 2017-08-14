@@ -26,7 +26,7 @@ describe('STSS3Enabler', function () {
       stsExpiryThresholdSeconds: stsExpiryThresholdSeconds,
       stsRoleArn: stsRoleArn,
       loggingConfig: loggingConfig,
-      dynamicBucketPolicyTemplateString: require('../dynamicBucketPolicy.json')
+      dynamicBucketPolicyTemplateString: require('./config/dynamicBucketPolicy.json')
     });
     assert.ok(stsEnabler);
     done();

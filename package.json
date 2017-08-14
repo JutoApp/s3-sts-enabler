@@ -9,6 +9,10 @@
   },
   "author": "Mike Cunneen",
   "homepage": "https://github.com/JutoApp/s3-sts-enabler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JutoApp/s3-sts-enabler"
+  },
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.92.0",

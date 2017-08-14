@@ -1,16 +1,16 @@
 {
   "name": "s3-sts-enabler",
   "version": "1.0.0",
-  "description": "",
-  "main": "s3-filesystem.js",
+  "description": "Amazon STS Temporary Credentials (for S3 Use)",
+  "main": "s3-sts-enabler.js",
   "scripts": {
     "test": "NODE_CONFIG_DIR=test/config NODE_ENV=test mocha --require babel-register"
   },
-  "author": "",
+  "author": "Mike Cunneen",
+  "homepage": "https://bitbucket.org/juto_app/s3-filesystem.git",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.92.0",
-    "config": "^1.26.1",
     "json-templater": "^1.1.0",
     "moment": "^2.18.1",
     "s3fs": "^2.5.0",
@@ -20,6 +20,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2016": "^6.24.1",
     "babel-register": "^6.24.1",
+    "config": "^1.26.1",
     "mocha": "^3.5.0"
   },
   "babel": {

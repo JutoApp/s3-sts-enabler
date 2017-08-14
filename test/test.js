@@ -15,7 +15,7 @@ const logger = new (winston.Logger)({
   ]
 });
 
-import STSS3Enabler from '../s3-filesystem';
+import STSS3Enabler from '../s3-sts-enabler';
 
 describe('STSS3Enabler', function () {
   let stsEnabler;

@@ -1,7 +1,6 @@
 const AWS = require('aws-sdk');
 const S3FS = require('s3fs');
 const moment = require('moment');
-const winston = require('winston');
 const json_templater = require('json-templater/object');
 
 // STS S3 Enabler module
@@ -35,11 +34,10 @@ class STSS3Enabler {
     this.dynamicBucketPolicyTemplateString = paramsObj.dynamicBucketPolicyTemplateString;
 
     this.sts = new AWS.STS(this.awsOptions);
-    this.logger = new (winston.Logger)({
-      transports: [
-        new (winston.transports.Console)(this.loggingConfig)
-      ]
-    });
+    this.logger = {
+      debug: (mesg)=> { console.log(`DEBUG: ${mesg}`);},
+      error: (err, stack) => { console.error(err, stack);}
+    }
   }
 
   /**

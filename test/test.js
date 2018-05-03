@@ -1,6 +1,5 @@
 const assert = require('assert');
 const config = require('config');
-const winston = require('winston');
 
 // config options (from config/test.json)
 const awsOptions = config.get('aws.awsOptions');
@@ -9,13 +8,12 @@ const stsRoleArn = config.get("aws.RoleArn");
 const loggingConfig = config.get('loggingConfig');
 
 
-const logger = new (winston.Logger)({
-  transports: [
-    new (winston.transports.Console)(loggingConfig)
-  ]
-});
+const logger = {
+  debug: (mesg)=> { console.log(`DEBUG: ${mesg}`);},
+  error: (err, stack) => { console.error(err, stack);}
+};
 
-import STSS3Enabler from '..';
+import STSS3Enabler from '../source/s3-sts-enabler';
 
 describe('STSS3Enabler', function () {
   let stsEnabler;
